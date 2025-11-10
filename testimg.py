@@ -4,7 +4,7 @@ from torchvision import transforms
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from modules.msdaunet import EMCPUNet
+from modules.msdaunet import MSDAUNet
 from configs.config_setting import setting_config
 from utils import get_logger, log_config_info, save_imgs, myNormalize, myToTensor, myResize
 import os
