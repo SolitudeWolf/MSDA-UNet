@@ -10,7 +10,7 @@ class setting_config:
     the config of training setting.
     """
 
-    network = 'esmdlunet'
+    network = 'msdaunet'
     model_config = {
         'num_classes': 1,
         'input_channels': 3,
