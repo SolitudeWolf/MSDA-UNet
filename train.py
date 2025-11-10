@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 import timm
 from datasets.dataset import NPY_datasets
 from tensorboardX import SummaryWriter
-from modules.esmdlunet import ESMDLUNet
+from modules.msdaunet import MSDAUNet
 
 from engine import *
 import os
@@ -60,8 +60,8 @@ def main(config):
 
     print('#----------Prepareing Model----------#')
     model_cfg = config.model_config
-    if config.network == 'esmdlunet':
-        model = ESMDLUNet(num_classes=model_cfg['num_classes'],
+    if config.network == 'msdaunet':
+        model = MSDAUNet(num_classes=model_cfg['num_classes'],
                         input_channels=model_cfg['input_channels'],
                         c_list=model_cfg['c_list'],
                         bridge=model_cfg['bridge'],
