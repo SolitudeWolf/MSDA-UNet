@@ -201,7 +201,7 @@ class Grouped_multi_axis_Hadamard_Product_Attention(nn.Module):
         return x
 
 
-class ESMDLUNet(nn.Module):
+class MSDAUNet(nn.Module):
 
     def __init__(self, num_classes=1, input_channels=3, c_list=[8, 16, 24, 32, 48, 64], depth=[1, 2, 2, 4],mlp_ratio=4,bridge=True, gt_ds=True,
                  patch_size=2):
