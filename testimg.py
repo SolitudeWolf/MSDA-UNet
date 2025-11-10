@@ -4,7 +4,7 @@ from torchvision import transforms
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from modules.emcpunet import EMCPUNet
+from modules.msdaunet import EMCPUNet
 from configs.config_setting import setting_config
 from utils import get_logger, log_config_info, save_imgs, myNormalize, myToTensor, myResize
 import os
@@ -14,7 +14,7 @@ from tqdm import tqdm
 config = setting_config()
 
 # 实例化模型
-model = EMCPUNet(num_classes=config.num_classes, input_channels=config.input_channels, c_list=config.model_config['c_list'], bridge=config.model_config['bridge'], gt_ds=config.model_config['gt_ds'])
+model = MSDAUNet(num_classes=config.num_classes, input_channels=config.input_channels, c_list=config.model_config['c_list'], bridge=config.model_config['bridge'], gt_ds=config.model_config['gt_ds'])
 
 # 加载权重
 try:
